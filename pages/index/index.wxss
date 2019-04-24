@@ -1,0 +1,44 @@
+swiper,swiper image {
+  width: 750rpx;
+  height: 360rpx;
+}
+/* 九宫格 */
+/* 
+1.父盒子 : border-left / top
+2.子盒子 : border-right/bottom
+ */
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  /* border往里面计算 */
+  box-sizing: border-box;
+}
+.grids-item  {
+  width: 33.333%;
+  height: 250rpx;
+  background: #fff;
+
+ /* border往里面计算 */
+  box-sizing: border-box;
+
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  /* 进行flex布局 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grids-item  image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.navgator {
+  padding: 10px;
+  background-color: #ccc;
+}

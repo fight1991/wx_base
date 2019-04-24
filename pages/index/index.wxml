@@ -1,0 +1,33 @@
+
+<!-- 轮播图 -->
+<swiper indicator-dots="{{ true }}" circular='{{ true  }}'
+  autoplay="{{ true }}" interval="{{ 3000 }}" duration="{{ 1000 }}">
+
+    <swiper-item>
+      <image src="../../assets/images/banner-01.png" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../assets/images/banner-02.png" />
+    </swiper-item>
+</swiper>
+
+<!-- 九宫格 -->
+<view class='navgator'>链接跳转方式</view>
+<view class='grids'>
+  <block wx:for='{{navList}}' wx:key='id'>
+    <navigator class='grids-item' url='{{"/pages/detail/detail?id="+item.id+"&name="+item.text}}'>
+      <image src='{{item.imgSrc}}'></image> 
+      <text>{{item.text}}</text>
+    </navigator>
+  </block>
+</view>
+
+<view class='navgator'>api跳转方式</view>
+<view class='grids'>
+  <block wx:for='{{navList}}' wx:key='id'>
+    <view class='grids-item' bindtap='goToDetail' data-id='{{item.id}}' data-name='{{item.text}}'>
+      <image src='{{item.imgSrc}}'></image> 
+      <text>{{item.text}}</text>
+    </view>
+  </block>
+</view>

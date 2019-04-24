@@ -1,0 +1,4 @@
+<!--pages/profile/profile.wxml-->
+<view>
+ <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点击登录</button>
+</view>
